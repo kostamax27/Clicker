@@ -32,6 +32,6 @@ class SetClickCommand extends Command
 		$this->main->getConfig()->set("clicker_position", ["x" => $sender->getFloorX(), "y" => $sender->getFloorY(), "z" => $sender->getFloorX()]);
 		$this->main->getConfig()->save();
 		$this->main->config["clicker_position"] = ["x" => $sender->getFloorX(), "y" => $sender->getFloorY(), "z" => $sender->getFloorX()];
-		$sender->sendMessage("§cYou have §asuccessfully§c installed the clicker!");
+		$sender->sendMessage("§eYou have §asuccessfully§e installed the clicker!");
 	}
 }
