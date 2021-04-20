@@ -1,5 +1,5 @@
 # Clicker
-** Clicking on a certain block will give coins **
+**Clicking on a certain block will give coins**
 
 
 ### Features
