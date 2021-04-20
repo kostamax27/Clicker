@@ -1,0 +1,35 @@
+---
+start_level: 0 # Start level
+money_min: 0 # The minimum amount of money from one click
+money_max: 2 # Maximum amount of money from one click
+level_money: 1 # How much money will be added
+# For instance:
+# It was money_min: 0 and money_max: 2
+# Has become money_min: 0 and money_max: 3
+need_xp: 50 # How much experience is needed to level up
+max_level: 10 # Maximum level
+xp_min: 0 # The minimum amount of experience with one click
+xp_max: 1 # The maximum amount of experience from one click
+level_xp: 2 # How much experience will be added
+# For instance:
+# It was xp_min: 0 and xp_max: 1
+# Has become xp_min: 0 and xp_max: 3
+
+form:
+  title: "You stats"
+  # Available tags:
+  # level - level
+  # xp - xp
+  # total - total money earned on the clicker
+  # clicks - total clicks made
+  # Use color (§)
+  stats: "§c• §r§eLevel§f: §b{level}\n§c• §r§eXP: §b{xp}/50\n§c• §r§eTotal earned: §b{total}\n§c• §r§eTotal clicks made: §b{clicks}"
+  exit: "§cExit"
+  
+tip: "§b Clicker §8> §e+ {money}"
+level_up: "§b Clicker §8> §rLevel UP"
+clicker_position: # Use you position
+  x: 0
+  "y": 4
+  z: 0
+...
