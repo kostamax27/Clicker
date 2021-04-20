@@ -32,6 +32,6 @@ class DelClickCommand extends Command
 		$this->main->getConfig()->remove("clicker_position");
 		$this->main->getConfig()->save();
 		unset($this->main->config["clicker_position"]);
-		$sender->sendMessage("You have successfully removed the clicker!");
+		$sender->sendMessage("§cYou have§a successfully§c removed the clicker!");
 	}
 }
