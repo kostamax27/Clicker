@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/kostamax27/Clicker
+build-by-default: true
+branches:
+- main
+projects:
+  Clicker:
+    path: ""
+...
