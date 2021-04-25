@@ -24,10 +24,10 @@ form:
   # clicks - total clicks made
   # Use color (§)
   stats: "§c• §r§eLevel§f: §b{level}\n§c• §r§eXP: §b{xp}/50\n§c• §r§eTotal earned: §b{total}\n§c• §r§eTotal clicks made: §b{clicks}"
-  exit: "§cExit"
+  exit: "§c  Exit  "
   
-tip: "§b Clicker §8> §e+ {money}"
-level_up: "§b Clicker §8> §rLevel UP"
+tip: "§b Clicker §8> §e+ {money} "
+level_up: "§b Clicker §8> §rLevel UP §e🠕"
 clicker_position: # Use you position
   x: 0
   "y": 4
