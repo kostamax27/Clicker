@@ -11,8 +11,8 @@
 
 ### Dependencies
 * Dependencies:
-* EconomyAPI: https://poggit.pmmp.io/p/EconomyAPI/5.7.2
-* FormaAPI: https://www.mediafire.com/file/ea46334sj7e2e20/FormAPI.phar/file
+* EconomyAPI: [https://poggit.pmmp.io/p/EconomyAPI/5.7.2] necessarily!
+* FormaAPI: [https://www.mediafire.com/file/ea46334sj7e2e20/FormAPI.phar/file] necessarily!
 
 
 ### Settings
