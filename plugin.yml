@@ -1,7 +1,7 @@
 name: Clicker
 version: 1.0.0
 main: kostamax27\Clicker\Main
-api: 3.0.0
+api: [3.0.0]
 
 softdepend:
  - EconomyAPI
