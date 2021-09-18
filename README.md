@@ -10,8 +10,7 @@
 
 
 ### Dependencies
-* Dependencies:
-* EconomyAPI: [https://poggit.pmmp.io/p/EconomyAPI/5.7.2] necessarily!
+* Dependencies: <a href="https://poggit.pmmp.io/p/EconomyAPI/">EconomyAPI</a></li>
 
 
 ### Settings
