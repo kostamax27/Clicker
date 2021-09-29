@@ -12,8 +12,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Server;
 
-class Main extends PluginBase
-{
+class Main extends PluginBase {
 	
 	/** @var array */
 	public $config;
@@ -23,8 +22,7 @@ class Main extends PluginBase
 	
 	private static $instance = null;
 	
-	public function onLoad() : void
-	{
+	public function onLoad() : void {
 		$commands =
 		[
 		  new SetClickCommand($this, "setclick", "Install clicker", "setclick.cmd"),
@@ -36,20 +34,15 @@ class Main extends PluginBase
 		    $this->getServer()->getCommandMap()->register("Clicker", $command);
 	}
 	
-	public function onEnable() : void
-	{
+	public function onEnable() : void {
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-		
 		$this->saveDefaultConfig();
 		$this->config = $this->getConfig()->getAll();
-		
 		$this->stats = new Config($this->getDataFolder() . "stats.json", Config::JSON);
-		
 		self::$instance = $this;
 	}
 	
-	public static function getInstance()
-	{
+	public static function getInstance() {
 		if(self::$instance === null) self::$instance = $this;
 		return self::$instance;
 	}
@@ -63,8 +56,7 @@ class Main extends PluginBase
 	     "clicks" => (int) $clicks - made total clicks for the entire time.
 	 * ]
 	 */
-	public function getStats(string $player) 
-	{
+	public function getStats(string $player) {
 		$player = strtolower($player);
 		return $this->stats->exists($player) ? $this->stats->get($player) : null;
 	}
@@ -72,8 +64,7 @@ class Main extends PluginBase
 	/**
 	 * @param string $key - available keys: level, xp, total, clicks.
 	 */
-	public function setStats(string $player, string $key, int $value) : void
-	{
+	public function setStats(string $player, string $key, int $value) : void {
 		$player = strtolower($player);
 		
 		$stats = $this->getStats($player);
@@ -83,8 +74,7 @@ class Main extends PluginBase
 		$this->stats->save();
 	}
 	
-	public function registerPlayer(string $player) : void
-	{
+	public function registerPlayer(string $player) : void {
 		$this->stats->set(strtolower($player), 
         [
           "level" => 0,
