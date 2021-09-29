@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace kostamax27\Clicker\form;
 
 use kostamax27\Clicker\Main;
-
 use jojoe77777\FormAPI\SimpleForm;
-
 use pocketmine\Player;
 
 class StatsForm extends SimpleForm
