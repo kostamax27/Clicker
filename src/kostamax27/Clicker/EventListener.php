@@ -21,7 +21,6 @@ class EventListener implements Listener {
 
 	public function onJoin(PlayerJoinEvent $event): void {
 		$nick = $event->getPlayer()->getName();
-
 		if ($this->main->getStats($nick) === null) {
 			$this->main->registerPlayer($nick);
 		}
@@ -37,14 +36,12 @@ class EventListener implements Listener {
 				$nick = $player->getName();
 				$stats = $api->getStats($nick);
 				$cfg = $api->config;
-
 				$api->setStats($nick, "clicks", $stats["clicks"] + 1);
 				$api->setStats($nick, "xp", $stats["xp"] + mt_rand($cfg["xp_min"], $cfg["xp_max"] + $stats["level"] * $cfg["level_xp"]));
 				$money = mt_rand($cfg["money_min"], $cfg["money_max"] + $stats["level"] * $cfg["level_money"]);
 				EconomyAPI::getInstance()->addMoney($nick, $money);
 				$api->setStats($nick, "total", $stats["total"] + $money);
 				$player->sendTip(str_replace("{money}", (string) $money, $cfg["tip"]));
-
 				if ($stats["xp"] >= $cfg["need_xp"]) {
 					if ($cfg["max_level"] > $stats["level"]) {
 						$api->setStats($nick, "level", $stats["level"] + 1);
