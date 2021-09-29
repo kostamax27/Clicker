@@ -17,7 +17,6 @@ class StatsForm extends SimpleForm
 		{
 			return;
         });
-        
         $stats = Main::getInstance()->getStats($player);
         $this->setTitle($config["form"]["title"]);
         $this->setContent(str_replace(["{level}", "{xp}", "{total}", "{clicks}"], [$stats["level"], $stats["xp"], $stats["total"], $stats["clicks"]], $config["form"]["stats"]));
